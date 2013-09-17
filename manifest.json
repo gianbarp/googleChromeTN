@@ -1,0 +1,35 @@
+{
+  "name": "TN - Todo Noticias",
+  "version": "3.0",
+  "manifest_version": 2,
+  "description": "Todas las noticias al instante en tu navegador",
+  "icons": { 
+	"16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png" 
+  },
+  "browser_action": {
+    "default_title": "TN - Todo Noticias",
+    "default_popup": "index.html",
+    "default_icon" : "logo.png"
+  },
+  "background" : {
+    "page": "background.html" 
+  },
+  "minimum_chrome_version": "21",
+  "offline_enabled": true,
+  "permissions": [
+    "http://api.tn.com.ar/services/*",
+    "http://tn.com.ar/services/*",
+    "http://172.16.48.104/json/*",
+    "https://twitter.com/*",
+    "http://twitter.com/*",
+    "tabs",
+    "notifications",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    "logo.png"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
